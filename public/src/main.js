@@ -1,10 +1,15 @@
-import React, {Component} from 'react';
-import {render} from "react-dom";
+import React from 'react';
+import ReactDom from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import Counter from './components/Counter';
+import handleCounter from './reducers/handle-counter';
 
-class HelloMessage extends React.Component {
+let store = createStore(handleCounter);
 
-    render() {
-        return <div>Hello World</div>;
-    }
-}
-render(<HelloMessage />, document.getElementById('app'));
+ReactDom.render(
+    <Provider store = {store}>
+      <Counter />
+    </Provider>,
+    document.getElementById('app')
+);
