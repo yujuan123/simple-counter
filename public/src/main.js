@@ -3,12 +3,12 @@ import ReactDom from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import Counter from './components/Counter';
-import handleCounter from './reducers/handle-counter';
+import reducers from './reducers/index';
 
-let store = createStore(handleCounter);
+let store = createStore(reducers);
 
 ReactDom.render(
-    <Provider store = {store}>
+    <Provider store={store}>
       <Counter />
     </Provider>,
     document.getElementById('app')
