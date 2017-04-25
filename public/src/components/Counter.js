@@ -25,8 +25,8 @@ class Counter extends Component {
         <div>
           <h2>Counter</h2>
           <p>The counter value is {this.props.count}</p>
-          <button onClick={this.onIncrement.bind(this)}>Increase</button>
-          <button onClick={this.onDecrement.bind(this)}>Decrease</button>
+          <button className="btn btn-info" onClick={this.onIncrement.bind(this)}>Increase</button>
+          <button className="btn btn-info" onClick={this.onDecrement.bind(this)}>Decrease</button>
         </div>
     )
   }
