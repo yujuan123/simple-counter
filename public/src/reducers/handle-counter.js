@@ -1,7 +1,10 @@
 /**
  * Created by yujuan on 17-4-20.
  */
-const handleCounter = (state = {count:0}, action)=> {
+const INITIAL_STATE = {
+  count: 0
+};
+const handleCounter = (state = INITIAL_STATE , action)=> {
   switch(action.type){
     case 'COUNTER_INCRE':
       return Object.assign({}, state, { count: state.count + 1});
